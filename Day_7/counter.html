@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      body {
+        counter-reset: Số;
+      }
+      h1 {
+        counter-reset: phụ;
+      }
+      h1::before {
+        counter-increment: Số;
+        content: "Số " counter(Số) ". ";
+      }
+      h2::before {
+        counter-increment: phụ;
+        content: counter(Số) "." counter(phụ) " ";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Counter CSS</h1>
+    <h2>learn 1</h2>
+    <h2>learn 2</h2>
+    <h2>learn 3</h2>
+    <h2>learn 4</h2>
+    <h2>learn 5</h2>
+
+    <h1>Learn Counter CSS</h1>
+    <h2>learn 1</h2>
+    <h2>learn 2</h2>
+    <h2>learn 3</h2>
+    <h2>learn 4</h2>
+    <h2>learn 5</h2>
+
+    <h1>Learn Counter CSS</h1>
+    <h2>learn 1</h2>
+    <h2>learn 2</h2>
+    <h2>learn 3</h2>
+    <h2>learn 4</h2>
+    <h2>learn 5</h2>
+  </body>
+</html>

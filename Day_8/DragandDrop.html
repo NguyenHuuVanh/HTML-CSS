@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <style>
+      #box {
+        width: 300px;
+        height: 150px;
+        border: 1px solid black;
+        margin-bottom: 16px;
+      }
+
+      img {
+        object-fit: cover;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Kéo hình ảnh vào một vị trí khác trong html sử dụng javascript:</p>
+    <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img
+      id="box1"
+      src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="250px"
+      height="100px"
+    />
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .tooltip {
+            border-bottom: 1px dotted black;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 120px;
+            background-color: #ccc;
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 4px;
+            z-index: 1;
+        }
+        
+        .tooltip:hover .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            bottom: 150%;
+            margin-left: -94px;
+            animation: 0.5s ease-in facein;
+        }
+        
+        @keyframes facein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Tooltip</h1>
+    <div class="tooltip">
+        Click me!<span class="tooltiptext">đây là tooltip!</span>
+    </div>
+</body>
+
+</html>

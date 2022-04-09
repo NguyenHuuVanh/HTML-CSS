@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <style>
+        h1 {
+          text-transform: uppercase;
+          text-align: center;
+          color: black;
+          border: 1px solid #000;
+          padding: 16px;
+          background-color: rgb(30, 145, 87);
+        }
+      </style>
+    </head>
+    <body class="turnoff">
+      <h1>This is Audio attribute below</h1>
+      <div class="Audio">
+        <audio src="./Audio/chạnh lòng thương em.mp3" controls></audio>
+      </div>
+      <button onclick="getLocation()">Location</button>
+      <p id="demo"></p>
+      <script>
+          var x=document.getElementById('demo')
+
+          function getLocation(){
+              if(navigator.geolocation){
+                  navigator.geolocation.getCurrentPosition(showPosition)
+              }
+              else{
+                  x.innerHTML="Không hiện thị được vị trí bạn cần phải cần phải cấp  quyền truy cập"
+              }
+          }
+
+          function showPosition(position){
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+          }
+      </script>
+</body>
+</html>

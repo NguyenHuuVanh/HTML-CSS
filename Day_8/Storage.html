@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+    <style>
+      button {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result"></div>
+    <button onclick="clickCounter()" type="button">Click me!</button>
+    <div id="showtimeclick"></div>
+    <script>
+      if (typeof Storage !== "undefined") {
+        localStorage.lastname = "Anh"; //Lưu trữ tên vào local
+        document.getElementById("result").innerHTML = localStorage.lastname;
+      } else {
+        document.getElementById("result").innerHTML = "Không có dữ liệu!";
+      }
+
+      //count click
+      function clickCounter() {
+        if (typeof localStorage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("showtimeclick").innerHTML =
+            "you have clicked the button " +
+            localStorage.clickcount +
+            " time(s)";
+          //   localStorage.removeItem("clickcount");sử dụng nếu bạn muốn reset lại số lần click
+        } else {
+          document.getElementById("showtimeclick").innerHTML =
+            "sorry,i don't khow how much your click!";
+        }
+      }
+    </script>
+  </body>
+</html>

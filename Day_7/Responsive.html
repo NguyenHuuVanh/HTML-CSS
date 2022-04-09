@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .left {
+        background-color: #2196f3;
+        padding: 20px;
+        float: left;
+        width: 20%; /* The width is 20%, by default */
+      }
+
+      .main {
+        background-color: #f1f1f1;
+        padding: 20px;
+        float: left;
+        width: 60%; /* The width is 60%, by default */
+      }
+
+      .right {
+        background-color: #04aa6d;
+        padding: 20px;
+        float: left;
+        width: 20%; /* The width is 20%, by default */
+      }
+
+      /* Use a media query to add a break point at 800px: */
+      @media screen and (max-width: 800px) {
+        .left,
+        .main,
+        .right {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+
+      button {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <iframe src="https://phim1080z.com/" width="100%" height=""></iframe>
+
+  <body>
+    <h2>aaaaaaaaaaaaa</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorum,
+      corporis cum labore aliquam molestias fugiat dolor maiores sapiente
+      accusamus alias laudantium repellendus quia libero adipisci deserunt
+      eveniet nulla iste.
+    </p>
+    <div class="left"><p>left</p></div>
+    <div class="main"><p>main</p></div>
+    <div class="right"><p>right</p></div>
+
+    <div class="intput-info">
+      <form action="">
+        <label for="fname">First name:</label><br />
+        <input type="number " id="fname" placeholder="First Name" /><br />
+        <label for="fname">Last name:</label><br />
+        <input type="text" id="fname" placeholder="Last name" /><br />
+      </form>
+    </div>
+
+    <h2>Form Elements</h2>
+    <form action="">
+      <label for="month">Choose months:</label>
+      <select name="month" id="moth" size="3" multiple>
+        <option value="Tháng 1">Tháng 1</option>
+        <option value="Tháng 2">Tháng 2</option>
+        <option value="Tháng 3" selected>Tháng 3</option>
+        <option value="Tháng 4">Tháng 4</option>
+        <option value="Tháng 5">Tháng 5</option>
+      </select>
+      <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+  </body>
+</html>

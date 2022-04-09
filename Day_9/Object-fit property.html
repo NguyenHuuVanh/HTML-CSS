@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-fit property</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .img {
+            width: calc(100% / 2);
+            margin-right: 16px;
+        }
+        
+        img {
+            width: 100%;
+            height: 600px;
+        }
+        
+        p {
+            font-size: 32px;
+            text-align: center;
+            border: 1px solid orange;
+            background-color: rgb(134, 67, 67);
+            color: white;
+        }
+        
+        .img.img1 {
+            position: relative;
+            height: 100%;
+            display: inline-block;
+            object-fit: fill;
+        }
+        
+        .img.img2 {
+            display: inline-block;
+            position: absolute;
+            margin-right: 16px;
+            object-fit: contain;
+        }
+        
+        .img.img3 {
+            position: relative;
+            margin-right: 16px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .img.img4 {
+            margin-right: 16px;
+            width: 100%;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Object-fit properties</h1>
+    <div class="images">
+        <div class="img img1">
+            <p>Object-fit:fill</p>
+            <img src="https://images.unsplash.com/photo-1644982648774-83312909bbef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        </div>
+        <div class="img img2">
+            <p>Object-fit:contain</p>
+            <img src="https://images.unsplash.com/photo-1644982648774-83312909bbef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        </div>
+        <div class="img img3">
+            <p>Object-fit:cover</p>
+            <img src="https://images.unsplash.com/photo-1644982648774-83312909bbef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        </div>
+        <div class="img img4">
+            <p>Object-fit:scale-down</p>
+            <img src="https://images.unsplash.com/photo-1644982648774-83312909bbef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        </div>
+    </div>
+</body>
+
+</html>

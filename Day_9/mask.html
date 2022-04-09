@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mask property</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .mask {
+            -webkit-mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png);
+            mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png);
+            -webkit-mask-size: 300px 300px;
+            mask-size: 300px 300px;
+            -webkit-mask-repeat: repeat;
+            mask-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is mask property</h1>
+    <div class="mask">
+        <img src="https://images.unsplash.com/photo-1521993117367-b7f70ccd029d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1140&q=80" alt="" />
+    </div>
+</body>
+
+</html>

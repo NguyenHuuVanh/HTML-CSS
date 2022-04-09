@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fe8d77;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  background: url(https://i-dulich.vnecdn.net/2019/03/05/Phap-1-1551759006_680x0.jpg)
+    top center/cover no-repeat;
+}
+h1 {
+  text-align: center;
+}
+
+.quan-heading {
+  padding: 8px;
+  background-color: #fff;
+  width: 50%;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.quan-heading:hover {
+  background-color: #ccc;
+}
+.quan-container img {
+  display: block;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 100px;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.quan-contact {
+  position: absolute;
+  margin-top: 600px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #000;
+  opacity: 1;
+}
+.contact {
+  margin-top: 620px;
+  position: absolute;
+  margin-left: 500px;
+  color: #000;
+}
+
+.fa-facebook-square {
+  color: #1b51bd;
+  opacity: 1;
+}
+.quan-place {
+  border-radius: 50%;
+  margin-top: 50px;
+  position: absolute;
+  height: 300px;
+  margin-left: 400px;
+}

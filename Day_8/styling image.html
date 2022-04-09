@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling html</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        img .filter {
+            max-width: 100%;
+            height: auto;
+            border: 10px solid #ddd;
+            object-fit: cover;
+            display: block;
+            align-items: center;
+            margin: 0 auto;
+            filter: brightness(250%);
+        }
+        
+        img:hover .filter {
+            box-shadow: 0 0 5px 1px black;
+        }
+        
+        h3 {
+            text-align: left;
+            font-size: 32px;
+        }
+        /* img overlay */
+        
+        .img--overlay {
+            width: 33.33333%;
+            position: relative;
+        }
+        
+        .img__overlay {
+            float: left;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background-color: green;
+        }
+        
+        .img--overlay:hover .overlay {
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a picture</h1>
+    <img class="filter" src="https://images.unsplash.com/photo-1646744683993-ce90cb0064c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80" alt="" />
+    <p>FACE IN IMG</p>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1646744683993-ce90cb0064c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80" alt="" width="33.3333%" height="150px" />
+    </div>
+    <!-- img hover overlay -->
+    <h2>This is img hover overlay</h2>
+    <h3>Fade in text:</h3>
+    <div class="img--overlay">
+        <img class="img__overlay" src="https://images.unsplash.com/photo-1646764065835-917bed6cc0b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="mountain" width="328px" height="328px" />
+        <div class="overlay">
+            <div class="text">Mountain</div>
+        </div>
+    </div>
+</body>
+
+</html>
